@@ -1,0 +1,36 @@
+{
+  "name": "pdf_summerizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/pdf_summerizer.mjs",
+  "bin": "src/pdf_summerizer.mjs",
+
+  "dependencies": {
+    "@slack/bolt": "^3.17.1",
+    "langchain": "^0.1.34",
+    "openai": "^4.38.1",
+    "pdf-parse": "^1.1.1",
+    "pdf.js-extract": "^0.2.1",
+    "pdfjs-dist": "^4.1.392",
+    "worker-loader": "^3.0.8"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  },
+
+  "pkg": {
+    "scripts": "src/pdf_summerizer.mjs",
+    "assets": [
+      "node_modules/**/*",
+      "src/**/*"
+    ]
+  },
+
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "mkdir -p bin && pkg . --output bin/pdf_summerizer --targets node18-linux-x64"
+  },
+  "author": "",
+  "license": "ISC"
+}
