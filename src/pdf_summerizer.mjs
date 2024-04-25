@@ -41,11 +41,11 @@ PDFからテキスト抽出したデータだが、きちんとしたドキュ�
 `);
 }
 
-// const default_system_prompt = fs.readFileSync(system_prompt_file_path, "utf-8");
-// if (default_system_prompt == "<Your system prompt>") {
-//     console.error("Please set your system prompt in config/system_prompt.txt file.");
-//     process.exit(1);
-// }
+const default_system_prompt = fs.readFileSync(system_prompt_file_path, "utf-8");
+if (default_system_prompt == "<Your system prompt>") {
+    console.error("Please set your system prompt in config/system_prompt.txt file.");
+    process.exit(1);
+}
 
 
 async function readData(file_path) {
